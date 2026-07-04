@@ -7,7 +7,7 @@
 script = ExtResource("1_ko86m")
 
 [node name="Timer" type="Timer" parent="." unique_id=1547658131]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=704650840]
