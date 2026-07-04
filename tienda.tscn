@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cqgimsbw0ttov"]
+
+[ext_resource type="Texture2D" uid="uid://d4d63282kibr4" path="res://Assets/Captura de pantalla 2026-07-04 023746.png" id="1_k64ye"]
+[ext_resource type="Script" uid="uid://csarh7ded1rwu" path="res://tienda.gd" id="1_ko86m"]
+
+[node name="Tienda" type="Node2D" unique_id=341721211]
+script = ExtResource("1_ko86m")
+
+[node name="Timer" type="Timer" parent="." unique_id=1547658131]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=704650840]
+zoom = Vector2(0.79, 0.79)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=883166835]
+scale = Vector2(2.1554961, 1.6318305)
+texture = ExtResource("1_k64ye")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cavoxjhqgr4fb"]
+
+[node name="Menu" type="Control" unique_id=1008792328]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1986705638]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 60.0
+offset_right = 822.0
+offset_bottom = 542.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=60191914]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=963819837]
+layout_mode = 2
+text = "Resume"
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer" unique_id=2048915563]
+layout_mode = 2
+text = "Quit"
