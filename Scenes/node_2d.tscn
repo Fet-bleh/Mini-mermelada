@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://bv5rpxmv65yef" path="res://Scenes/etiquetado.gd" id="10_1nvmp"]
 [ext_resource type="PackedScene" uid="uid://cgeia0lx7p6bl" path="res://Scenes/submenu_maquina_4.tscn" id="11_el1jj"]
 [ext_resource type="Texture2D" uid="uid://qrs6m4hnc1eg" path="res://Assets/maquina completada.png" id="13_he4j0"]
+[ext_resource type="Script" uid="uid://cnljxrnher278" path="res://Scenes/tienda.gd" id="14_85gyg"]
+[ext_resource type="PackedScene" uid="uid://cqgimsbw0ttov" path="res://tienda.tscn" id="15_c32x4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85gyg"]
 texture = ExtResource("3_he4j0")
@@ -1604,7 +1606,20 @@ tile_set = SubResource("TileSet_c32x4")
 position = Vector2(774, 946)
 sprite_frames = SubResource("SpriteFrames_fg7i4")
 
+[node name="Tienda_sprite" type="Sprite2D" parent="." unique_id=1268554274]
+
+[node name="BaseMaquina" parent="Tienda_sprite" unique_id=1188009763 instance=ExtResource("4_85gyg")]
+
+[node name="AreaMaquina" parent="Tienda_sprite/BaseMaquina" index="0" unique_id=1761826244 groups=["machines"]]
+script = ExtResource("14_85gyg")
+submenu_scene = ExtResource("15_c32x4")
+
+[node name="ColisionMaquina" parent="Tienda_sprite/BaseMaquina/AreaMaquina" index="0" unique_id=779081971]
+position = Vector2(192.225, 72.22)
+scale = Vector2(0.185, 0.185)
+
 [editable path="MateriaPrima/BaseMaquina"]
 [editable path="Corte/BaseMaquina"]
 [editable path="QA/BaseMaquina"]
 [editable path="Etiquetado/BaseMaquina"]
+[editable path="Tienda_sprite/BaseMaquina"]

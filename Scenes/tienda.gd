@@ -15,5 +15,3 @@ func _on_area_maquina_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
 		interacted.emit(self)
 		print(self)
-func setup():
-	get_parent().get_parent().temperatura

@@ -10,8 +10,10 @@ func machine_interact(machine : Machine) -> void:
 	print(ui_layer.get_children())
 	var submenu = machine.submenu_scene.instantiate()
 	ui_layer.add_child(submenu)
-	submenu.global_position = machine.global_position - submenu.get_child(0).size/2
-	#submenu.setup(machine)
+	if submenu.get_child(0) is PanelContainer:
+		submenu.global_position = machine.global_position - submenu.get_child(0).size/2
+	if submenu.has_method("setup"):
+		submenu.setup(machine)
 
 func clean_all() -> void:
 	for child in ui_layer.get_children():

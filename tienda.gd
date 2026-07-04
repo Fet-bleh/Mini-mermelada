@@ -5,7 +5,7 @@ var n = randi_range(1, 3)
 
 #main
 func _on_close_pressed() -> void:
-	visible = false
+	queue_free()
 	
 func _on_timer_timeout() -> void:
 	var virus_inst = virus.instantiate()
