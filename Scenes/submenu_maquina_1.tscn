@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cj8wbt4c2cr4"]
+
+[node name="SubmenuMaquina1" type="Node2D" unique_id=1870061080]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2073414716]
+offset_right = 586.0
+offset_bottom = 391.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1833030013]
+layout_mode = 2
+text = "Cortado"
+horizontal_alignment = 1

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b121kiekdk0jb"]
+
+[node name="Node2D" type="Node2D" unique_id=423605464]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=401808319]
+offset_right = 586.0
+offset_bottom = 391.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=675973626]
+layout_mode = 2
+text = "QA"
+horizontal_alignment = 1

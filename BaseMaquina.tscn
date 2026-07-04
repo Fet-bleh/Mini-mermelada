@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://cy38aoo3vhijo"]
 
-[ext_resource type="Script" uid="uid://n2u0vepuigie" path="res://OpenMachineState.gd" id="1_q03cx"]
+[ext_resource type="Script" uid="uid://n2u0vepuigie" path="res://Scripts/OpenMachineState.gd" id="1_q03cx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
 size = Vector2(1150, 646)
 
-[node name="BaseMaquina1" type="Node2D" unique_id=1196690787]
+[node name="BaseMaquina" type="Node2D" unique_id=1196690787]
 
-[node name="AreaMaquina1" type="Area2D" parent="." unique_id=1761826244]
+[node name="AreaMaquina" type="Area2D" parent="." unique_id=1761826244]
 position = Vector2(482, 253)
 
-[node name="ColisionMaquina1" type="CollisionShape2D" parent="AreaMaquina1" unique_id=779081971]
+[node name="ColisionMaquina" type="CollisionShape2D" parent="AreaMaquina" unique_id=779081971]
 position = Vector2(95, 72)
 shape = SubResource("RectangleShape2D_7i21o")
 script = ExtResource("1_q03cx")
 
-[connection signal="input_event" from="AreaMaquina1" to="AreaMaquina1/ColisionMaquina1" method="_on_area_maquina_input_event"]
+[connection signal="input_event" from="AreaMaquina" to="AreaMaquina/ColisionMaquina" method="_on_area_maquina_input_event"]

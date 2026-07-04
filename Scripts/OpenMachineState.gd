@@ -16,4 +16,5 @@ func _process(delta):
 
 func _on_area_maquina_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
-		maquina_interact.emit($"..")
+		maquina_interact.emit(self)
+		print(self)
