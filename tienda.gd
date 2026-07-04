@@ -3,10 +3,10 @@ extends Node2D
 const virus = preload("res://Anuncio_malo_grrr.tscn")
 var n = randi_range(1, 3)
 
-
-
-
-# vvairu
+#main
+func _on_close_pressed() -> void:
+	visible = false
+	
 func _on_timer_timeout() -> void:
 	var virus_inst = virus.instantiate()
 	var n = randi() % 5

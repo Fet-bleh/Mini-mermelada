@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://d4d63282kibr4" path="res://Assets/Captura de pantalla 2026-07-04 023746.png" id="1_k64ye"]
 [ext_resource type="Script" uid="uid://csarh7ded1rwu" path="res://tienda.gd" id="1_ko86m"]
+[ext_resource type="Texture2D" uid="uid://btjd62jxdn8br" path="res://Assets/PNG/Default/dinero.png" id="3_sruq1"]
 
 [node name="Tienda" type="Node2D" unique_id=341721211]
+process_mode = 3
 script = ExtResource("1_ko86m")
 
 [node name="Timer" type="Timer" parent="." unique_id=1547658131]
@@ -11,10 +13,24 @@ wait_time = 5.0
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=704650840]
-zoom = Vector2(0.79, 0.79)
+zoom = Vector2(1.015, 1.015)
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=883166835]
 scale = Vector2(2.1554961, 1.6318305)
 texture = ExtResource("1_k64ye")
 
+[node name="Close" type="Button" parent="Camera2D" unique_id=1998557784]
+offset_left = 464.0
+offset_top = -294.0
+offset_right = 546.0
+offset_bottom = -248.0
+text = "Close"
+
+[node name="Dinero" type="Sprite2D" parent="Camera2D" unique_id=412352311]
+position = Vector2(-447, -233)
+scale = Vector2(0.045141123, 0.042096466)
+texture = ExtResource("3_sruq1")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Camera2D/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Camera2D/Close" to="." method="_on_button_pressed"]
