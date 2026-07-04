@@ -1,17 +1,21 @@
 extends Node
-
 @onready var ui_layer: CanvasLayer = $".."
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	for machine in get_tree().get_nodes_in_group("machines"):
 		machine.interacted.connect(machine_interact)
 
 func machine_interact(machine : Machine) -> void:
-	print(self)
+	clean_all()
+	print(ui_layer.get_children())
 	var submenu = machine.submenu_scene.instantiate()
 	ui_layer.add_child(submenu)
-	submenu.global_position = machine.global_position + Vector2(0, 0)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	submenu.global_position = machine.global_position - submenu.get_child(0).size/2
+	#submenu.setup(machine)
+
+func clean_all() -> void:
+	for child in ui_layer.get_children():
+		if child.name != "UIManager":
+			child.queue_free()
 func _process(delta):
 	pass

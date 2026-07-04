@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://23m6o5hco473"]
 
-[node name="Node2D" type="Node2D" unique_id=423605464]
+[node name="Node2D" type="Control" unique_id=1218856026]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1775803927]
-offset_right = 586.0
-offset_bottom = 391.0
+layout_mode = 0
+offset_right = 406.0
+offset_bottom = 290.0
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=2027550342]
 layout_mode = 2
-text = "Materia Prima"
+text = "Cortado"
 horizontal_alignment = 1
