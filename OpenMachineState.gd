@@ -1,5 +1,6 @@
 extends CollisionShape2D
 
+signal maquina_interact(maquina : Object)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,5 +15,5 @@ func _process(delta):
 
 
 func _on_area_maquina_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		
+	if event.is_action_pressed("click"):
+		maquina_interact.emit($"..")
