@@ -26,5 +26,5 @@ scale = Vector2(0.43438905, 0.42666665)
 script = ExtResource("3_5tg6w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnuncioMaloGrr/ElementRedDiamondGlossy/Area2D" unique_id=1578715014]
-position = Vector2(-0.9999924, -0.625)
+position = Vector2(-0.9999924, -0.62499905)
 shape = SubResource("RectangleShape2D_2evi8")
