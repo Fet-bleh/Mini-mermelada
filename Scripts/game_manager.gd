@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.global_position = self.global_position + Vector2(1,5)
-	pass
+	if Gamestate.sospecha >= 100:
+		Gamestate.reset()
