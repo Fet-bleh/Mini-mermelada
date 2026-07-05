@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy38aoo3vhijo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
-size = Vector2(1150, 646)
+size = Vector2(693, 621)
 
 [node name="BaseMaquina" type="Node2D" unique_id=1196690787]
 
@@ -9,7 +9,7 @@ size = Vector2(1150, 646)
 position = Vector2(482, 253)
 
 [node name="ColisionMaquina" type="CollisionShape2D" parent="AreaMaquina" unique_id=779081971]
-position = Vector2(95, 72)
+position = Vector2(-133.5, 59.5)
 shape = SubResource("RectangleShape2D_7i21o")
 
 [connection signal="input_event" from="AreaMaquina" to="AreaMaquina/ColisionMaquina" method="_on_area_maquina_input_event"]
