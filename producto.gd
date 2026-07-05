@@ -5,6 +5,7 @@ signal enviado(dinero: int)
 
 var speed = 100
 var dinero = 50
+var propiedades = []
 @onready var sprite: Sprite2D = $ProductoSprite
 
 func _ready() ->void:
@@ -16,6 +17,11 @@ func _process(delta):
 	position.x += speed*delta
 	pass
 
-func apply_texture(textura: Texture2D,  dinero_cambio: int = 0):
-	sprite.texture = textura  
+func apply_texture(textura: String,  resultado: String = "", dinero_cambio: int = 0):
+	sprite.texture = load(textura)
 	dinero += dinero_cambio
+	propiedades.append(resultado)
+
+func despawn() -> void:
+	enviado.emit(dinero)
+	queue_free()

@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://cr7hlf0d04qi7"]
 
 [ext_resource type="Script" uid="uid://cjscp5eheca32" path="res://producto.gd" id="1_d6hsj"]
-[ext_resource type="Texture2D" uid="uid://bjsoup86c12mc" path="res://Assets/protagonist-v2.png" id="2_2uhc7"]
+[ext_resource type="Texture2D" uid="uid://daq23xxsth5ev" path="res://Assets/figuritas individuales/bola mate.png" id="2_2uhc7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
-size = Vector2(1, 22.5)
+size = Vector2(2.5, 25.625)
 
 [node name="Producto" type="Area2D" unique_id=1476850437]
 script = ExtResource("1_d6hsj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432922541]
-position = Vector2(9, 11.25)
+position = Vector2(10, 12.1875)
 shape = SubResource("RectangleShape2D_7i21o")
 
 [node name="ProductoSprite" type="Sprite2D" parent="." unique_id=1995049301]
 visible = false
-position = Vector2(6, 11.999999)
-scale = Vector2(0.3691405, 0.4296871)
+position = Vector2(5, 6.0000005)
+scale = Vector2(0.9375, 0.9375)
 texture = ExtResource("2_2uhc7")
 region_rect = Rect2(0, 0, 127.51, 128)

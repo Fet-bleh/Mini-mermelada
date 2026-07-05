@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cqgimsbw0ttov" path="res://tienda.tscn" id="15_c32x4"]
 [ext_resource type="Script" uid="uid://4glp14nqwps3" path="res://Scenes/spawner.gd" id="17_hpu6p"]
 [ext_resource type="PackedScene" uid="uid://cr7hlf0d04qi7" path="res://Scenes/producto.tscn" id="18_hpu6p"]
+[ext_resource type="Script" uid="uid://dfa65s61ete0c" path="res://Scenes/despawner.gd" id="21_el1jj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85gyg"]
 texture = ExtResource("3_he4j0")
@@ -1580,6 +1581,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
+size = Vector2(16.176638, 103.16174)
+
 [node name="Main" type="Node2D" unique_id=1979521281]
 scale = Vector2(1.36, 1.36)
 script = ExtResource("1_2ooml")
@@ -1711,9 +1715,17 @@ position = Vector2(52.941174, 75.00001)
 scale = Vector2(0.185, 0.185)
 
 [node name="Spawner" type="Node2D" parent="." unique_id=1491430991]
-position = Vector2(122.05884, 210.29411)
+position = Vector2(122.058846, 211.0294)
 script = ExtResource("17_hpu6p")
 ProductoEscena = ExtResource("18_hpu6p")
+
+[node name="despawner" type="Area2D" parent="." unique_id=1111434532]
+script = ExtResource("21_el1jj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="despawner" unique_id=1216367896]
+position = Vector2(839.7056, 208.19836)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_7i21o")
 
 [editable path="MateriaPrima/BaseMaquina"]
 [editable path="Corte/BaseMaquina"]

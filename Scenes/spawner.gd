@@ -18,9 +18,6 @@ func _process(delta):
 
 func spawn_producto() -> void:
 	var producto = ProductoEscena.instantiate()
-	
-	print(producto.position)
-	print(position)
 	producto.enviado.connect(en_despawn)
 	add_child(producto)
 
