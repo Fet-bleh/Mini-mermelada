@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qrs6m4hnc1eg"
-path="res://.godot/imported/maquina completada.png-6e812afbf395c5b01e30d238e4b56595.ctex"
+uid="uid://b12txofqpf3kt"
+path="res://.godot/imported/maquina dos mate mal .png-78beac4af98984c97cf98a21b0cd6dae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/maquina completada.png"
-dest_files=["res://.godot/imported/maquina completada.png-6e812afbf395c5b01e30d238e4b56595.ctex"]
+source_file="res://Assets/maquinas/maquina dos mate mal .png"
+dest_files=["res://.godot/imported/maquina dos mate mal .png-78beac4af98984c97cf98a21b0cd6dae.ctex"]
 
 [params]
 
