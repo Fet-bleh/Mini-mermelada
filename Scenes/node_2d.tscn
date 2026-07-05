@@ -2310,6 +2310,7 @@ script = ExtResource("6_fg7i4")
 submenu_scene = ExtResource("7_gwne5")
 
 [node name="ColisionMaquina" parent="Corte/BaseMaquina/AreaMaquina" index="0" unique_id=779081971]
+visible = false
 position = Vector2(381.067, 149.176)
 scale = Vector2(0.955, 1.065)
 
@@ -2327,6 +2328,7 @@ script = ExtResource("8_hpu6p")
 submenu_scene = ExtResource("9_op2xg")
 
 [node name="ColisionMaquina" parent="QA/BaseMaquina/AreaMaquina" index="0" unique_id=779081971]
+visible = false
 position = Vector2(-70.235306, 64.64699)
 scale = Vector2(1.035, 1.16)
 
