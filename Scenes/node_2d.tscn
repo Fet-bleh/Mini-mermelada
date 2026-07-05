@@ -1671,7 +1671,7 @@ tile_set = SubResource("TileSet_c32x4")
 [node name="tiendita" type="TileMapLayer" parent="cuarto manager2" unique_id=1179578011]
 position = Vector2(320.00003, 736.00006)
 scale = Vector2(0.9999999, 0.9999999)
-tile_map_data = PackedByteArray("AAAEAAYABAAsABIAAAAEAAcABAAsABMAAAAFAAYABAAsABIAAAAFAAcABAAsABMAAAAGAAYABAAsABIAAAAGAAcABAAsABMAAAAzABkABAAfABkAAAAvABoABAAbABgAAAAwABoABAAcABgAAAAxABoABAAdABgAAAArABoABAAbABgAAAAsABoABAAcABgAAAAtABoABAAdABgAAAAzABgABAAfABcAAAArABUABAAbABcAAAAsABUABAAcABcAAAAtABUABAAdABcAAAAvABUABAAbABcAAAAwABUABAAcABcAAAAxABUABAAdABcAAAAzABcABAAfABkAAAAzABYABAAfABcAAAArABQABAAGAA8AAAAsABQABAAGAA8AAAAtABQABAAGAA8AAAAuABQABAAGAA8AAAAvABQABAAGAA8AAAAwABQABAAGAA8AAAAxABQABAAGAA8AAAAyABQABAAGAA8AAAAzABQABAAGAA8AAAA=")
+tile_map_data = PackedByteArray("AAAzABkABAAfABkAAAAvABoABAAbABgAAAAwABoABAAcABgAAAAxABoABAAdABgAAAArABoABAAbABgAAAAsABoABAAcABgAAAAtABoABAAdABgAAAAzABgABAAfABcAAAArABUABAAbABcAAAAsABUABAAcABcAAAAtABUABAAdABcAAAAvABUABAAbABcAAAAwABUABAAcABcAAAAxABUABAAdABcAAAAzABcABAAfABkAAAAzABYABAAfABcAAAArABQABAAGAA8AAAAsABQABAAGAA8AAAAtABQABAAGAA8AAAAuABQABAAGAA8AAAAvABQABAAGAA8AAAAwABQABAAGAA8AAAAxABQABAAGAA8AAAAyABQABAAGAA8AAAAzABQABAAGAA8AAAA=")
 tile_set = SubResource("TileSet_c32x4")
 
 [node name="techo manager" type="TileMapLayer" parent="cuarto manager2" unique_id=1706957428]
@@ -1710,7 +1710,7 @@ frame_progress = 0.16960938
 [node name="MateriaPrima" type="AnimatedSprite2D" parent="." unique_id=1196702564]
 position = Vector2(194.85295, 206.61765)
 sprite_frames = SubResource("SpriteFrames_ty0te")
-frame_progress = 0.82003087
+frame_progress = 0.9772985
 
 [node name="BaseMaquina" parent="MateriaPrima" unique_id=1196690787 instance=ExtResource("4_85gyg")]
 position = Vector2(-38.666687, -24.000027)
@@ -1747,7 +1747,7 @@ scale = Vector2(0.985, 1.065)
 [node name="QA" type="AnimatedSprite2D" parent="." unique_id=1812626405]
 position = Vector2(491.91174, 208.82353)
 sprite_frames = SubResource("SpriteFrames_bn5ri")
-frame_progress = 0.8443103
+frame_progress = 0.18986529
 
 [node name="BaseMaquina" parent="QA" unique_id=689112342 instance=ExtResource("4_85gyg")]
 position = Vector2(-51.470573, -40.441174)
