@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bb6rikbf01nm7"]
+
+[ext_resource type="Script" uid="uid://cgrmpif5c2vd6" path="res://node_2d.gd" id="1_ddnvm"]
+
+[node name="Tienda" type="Node2D" unique_id=1569276362]
+script = ExtResource("1_ddnvm")
+
+[node name="TiendaUI" type="PanelContainer" parent="." unique_id=1108600595]
+offset_right = 472.0
+offset_bottom = 370.0

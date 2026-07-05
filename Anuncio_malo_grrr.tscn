@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dsfml02wwo8hh"]
+
+[ext_resource type="Script" uid="uid://dpu7nhf63c67r" path="res://anuncio_malo_grr.gd" id="1_5tg6w"]
+[ext_resource type="Texture2D" uid="uid://cl1eu6wisobo8" path="res://Assets/PNG/Default/vairu.png" id="1_yf7o2"]
+[ext_resource type="Script" uid="uid://djem5sivtuj7a" path="res://area_2d.gd" id="3_5tg6w"]
+[ext_resource type="Texture2D" uid="uid://bd8f8biylu88f" path="res://Assets/PNG/Default/element_red_diamond_glossy.png" id="3_yf7o2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2evi8"]
+size = Vector2(106, 106.000015)
+
+[node name="Node2D" type="Node2D" unique_id=1055390815]
+
+[node name="AnuncioMaloGrr" type="Sprite2D" parent="." unique_id=62366850]
+scale = Vector2(0.14392221, 0.15840836)
+texture = ExtResource("1_yf7o2")
+script = ExtResource("1_5tg6w")
+
+[node name="ElementRedDiamondGlossy" type="Sprite2D" parent="AnuncioMaloGrr" unique_id=848797635]
+position = Vector2(632.286, -271.45032)
+scale = Vector2(3.24343, 3.2503583)
+texture = ExtResource("3_yf7o2")
+
+[node name="Area2D" type="Area2D" parent="AnuncioMaloGrr/ElementRedDiamondGlossy" unique_id=916175117]
+position = Vector2(0.4343872, 0.26666832)
+scale = Vector2(0.43438905, 0.42666665)
+script = ExtResource("3_5tg6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnuncioMaloGrr/ElementRedDiamondGlossy/Area2D" unique_id=1578715014]
+z_index = 36
+position = Vector2(-0.9999924, -0.62499905)
+shape = SubResource("RectangleShape2D_2evi8")
