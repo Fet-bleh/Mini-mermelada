@@ -3,7 +3,7 @@ class_name Producto
 
 signal enviado(dinero: int)
 
-var speed = 100
+var speed = 59
 var dinero = 50
 var propiedades = []
 @onready var sprite: Sprite2D = $ProductoSprite

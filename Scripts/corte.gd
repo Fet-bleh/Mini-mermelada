@@ -20,10 +20,12 @@ func _on_area_entered(area: Area2D) -> void:
 	if not area.is_in_group("producto"):
 		return
 	var resultado = elegir_caso()
+	var animacion = resultado + " " + area.propiedades[-1] 
+	$"../..".play(animacion, 1.05)
 	medidor_sospecha = max(medidor_sospecha+sospecha[resultado], 0)
 	#print(medidor_sospecha)
 	if resultado == "terrible": 
-		area.apply_texture(area.get_child(1).texture.resource_path, "circulo", dinero[resultado])
+		area.apply_texture(area.get_child(1).texture.resource_path, "bola", dinero[resultado])
 	else:
 		area.apply_texture(texturas[area.propiedades[-1]], "triangulo", dinero[resultado])
 
@@ -31,6 +33,7 @@ func _on_area_exited(area: Area2D) -> void:
 	if not area.is_in_group("producto"):
 		return
 	area.get_child(1).visible = true
+	$"../..".stop()
 
 func elegir_caso() -> String:
 	var total := 0.0

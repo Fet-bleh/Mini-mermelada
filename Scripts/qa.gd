@@ -1,7 +1,7 @@
 extends Machine
 
 var medidor_sospecha = 0
-@export var texturas: Dictionary = {"circulo": "res://Assets/figuritas individuales/mierdita.png" , "triangulo": "res://Assets/figuritas individuales/mierdita.png"}
+@export var texturas: Dictionary = {"bola": "res://Assets/figuritas individuales/mierdita.png" , "triangulo": "res://Assets/figuritas individuales/mierdita.png"}
 @export var dinero: Dictionary = {"bueno": 10, "terrible": -30}
 @export var probabilidad: Dictionary = {"bueno": 0.85, "terrible": 0.15}
 @export var sospecha: Dictionary = {"bueno": -10, "terrible": 25}
@@ -20,6 +20,8 @@ func _on_area_entered(area: Area2D) -> void:
 	if not area.is_in_group("producto"):
 		return
 	var resultado = elegir_caso()
+	var animacion = resultado + " " + area.propiedades[-1] 
+	$"../..".play(animacion, .8)
 	medidor_sospecha = max(medidor_sospecha+sospecha[resultado], 0)
 	#print(medidor_sospecha)
 	if resultado == "bueno": 
@@ -32,6 +34,7 @@ func _on_area_exited(area: Area2D) -> void:
 	if not area.is_in_group("producto"):
 		return
 	area.get_child(1).visible = true
+	$"../..".stop()
 
 func elegir_caso() -> String:
 	var total := 0.0

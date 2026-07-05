@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://daq23xxsth5ev" path="res://Assets/figuritas individuales/bola mate.png" id="2_2uhc7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
-size = Vector2(2.5, 25.625)
+size = Vector2(10.25, 10.8125)
 
 [node name="Producto" type="Area2D" unique_id=1476850437]
 script = ExtResource("1_d6hsj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432922541]
-position = Vector2(10, 12.1875)
+position = Vector2(5.56, 5.59375)
+scale = Vector2(0.95, 1)
 shape = SubResource("RectangleShape2D_7i21o")
 
 [node name="ProductoSprite" type="Sprite2D" parent="." unique_id=1995049301]
