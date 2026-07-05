@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://bjsoup86c12mc" path="res://Assets/protagonist-v2.png" id="2_2uhc7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
-size = Vector2(1, 21)
+size = Vector2(1, 22.5)
 
 [node name="Producto" type="Area2D" unique_id=1476850437]
 script = ExtResource("1_d6hsj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432922541]
-position = Vector2(10, 10)
+position = Vector2(9, 11.25)
 shape = SubResource("RectangleShape2D_7i21o")
 
 [node name="ProductoSprite" type="Sprite2D" parent="." unique_id=1995049301]
-position = Vector2(23, 22)
+visible = false
+position = Vector2(6, 11.999999)
 scale = Vector2(0.3691405, 0.4296871)
 texture = ExtResource("2_2uhc7")
-region_enabled = true
-region_rect = Rect2(0, 0, 128, 128)
+region_rect = Rect2(0, 0, 127.51, 128)
