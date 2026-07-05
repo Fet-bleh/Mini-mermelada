@@ -1,10 +1,10 @@
 extends Machine
 
-#falta definir la textura
+var medidor_sospecha = 0
 @export var texturas: Dictionary = {"mate": "res://Assets/figuritas individuales/triangulito mate.png", "trigo": "res://Assets/figuritas individuales/triangulo trigo.png", "mota": "res://Assets/figuritas individuales/triangulito mota.png"}
 @export var dinero: Dictionary = {"bueno": 10, "terrible": -30}
-@export var probabilidad: Dictionary = {"bueno": 0.85, "terrible": 0.15}
-@export var sospecha: Dictionary = {"bueno": -10, "terrible": 25}
+@export var probabilidad: Dictionary = {"bueno": 0.8, "terrible": 0.2}
+@export var sospecha: Dictionary = {"bueno": -5, "terrible": 20}
 
 func _ready():
 	input_event.connect(_on_area_maquina_input_event)
@@ -20,7 +20,8 @@ func _on_area_entered(area: Area2D) -> void:
 	if not area.is_in_group("producto"):
 		return
 	var resultado = elegir_caso()
-	print(resultado)
+	medidor_sospecha = max(medidor_sospecha+sospecha[resultado], 0)
+	#print(medidor_sospecha)
 	if resultado == "terrible": 
 		area.apply_texture(area.get_child(1).texture.resource_path, "circulo", dinero[resultado])
 	else:

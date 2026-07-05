@@ -5,7 +5,6 @@ var sospecha: int=0
 
 func add_dinero(dineros: int):
 	dinero += dineros
-	print(dinero)
 
 func reset():
 	dinero = 0
