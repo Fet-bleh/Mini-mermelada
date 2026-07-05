@@ -1622,8 +1622,14 @@ tile_set = SubResource("TileSet_c32x4")
 tile_map_data = PackedByteArray("AAAWADIABAAiAAQAAAAWADMABAAiAAUAAAAWADQABAAiAAUAAAAWADUABAAiAAUAAAAWADYABAAiAAUAAAAWADcABAAiAAUAAAAWADgABAAiAAUAAAAWADkABAAiAAcAAAAZADMABAAiAAQAABAZADQABAAiAAUAADAZADUABAAiAAUAADAZADYABAAiAAUAADAZADcABAAiAAUAADAZADgABAAiAAUAADAZADkABAAiAAcAABA=")
 tile_set = SubResource("TileSet_c32x4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1425923088]
+[node name="comboyer" type="AnimatedSprite2D" parent="." unique_id=1425923088]
 position = Vector2(275.8529, 226.47058)
+scale = Vector2(1.3835787, 0.9999999)
+sprite_frames = SubResource("SpriteFrames_3ahog")
+frame_progress = 0.16960938
+
+[node name="comboyer2" type="AnimatedSprite2D" parent="." unique_id=643831983]
+position = Vector2(413.9706, 226.47061)
 scale = Vector2(1.3835787, 0.9999999)
 sprite_frames = SubResource("SpriteFrames_3ahog")
 frame_progress = 0.16960938
@@ -1666,7 +1672,6 @@ visible = false
 position = Vector2(382.5625, 149.17584)
 
 [node name="QA" type="Sprite2D" parent="." unique_id=304992061]
-visible = false
 
 [node name="BaseMaquina" parent="QA" unique_id=689112342 instance=ExtResource("4_85gyg")]
 position = Vector2(548, 172.66666)
@@ -1680,7 +1685,6 @@ submenu_scene = ExtResource("9_op2xg")
 position = Vector2(-172.66666, 29.666666)
 
 [node name="Etiquetado" type="Sprite2D" parent="." unique_id=1379887683]
-visible = false
 
 [node name="BaseMaquina" parent="Etiquetado" unique_id=2040077494 instance=ExtResource("4_85gyg")]
 position = Vector2(670.6666, 177.33331)
@@ -1694,7 +1698,6 @@ submenu_scene = ExtResource("11_el1jj")
 position = Vector2(-134.1741, -3.7242813)
 
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="." unique_id=211465135]
-visible = false
 
 [node name="Tienda_sprite" type="Sprite2D" parent="." unique_id=1268554274]
 z_index = 100
