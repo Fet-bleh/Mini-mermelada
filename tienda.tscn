@@ -3,92 +3,34 @@
 [ext_resource type="Texture2D" uid="uid://d4d63282kibr4" path="res://Assets/Captura de pantalla 2026-07-04 023746.png" id="1_k64ye"]
 [ext_resource type="Script" uid="uid://csarh7ded1rwu" path="res://tienda.gd" id="1_ko86m"]
 [ext_resource type="Texture2D" uid="uid://btjd62jxdn8br" path="res://Assets/PNG/Default/dinero.png" id="3_sruq1"]
-[ext_resource type="Texture2D" uid="uid://bnw28o2xvq6o4" path="res://Assets/Untitled.png" id="4_yvia3"]
 
 [node name="Tienda" type="Node2D" unique_id=341721211]
 process_mode = 3
-position = Vector2(578, 322)
 script = ExtResource("1_ko86m")
 
 [node name="Timer" type="Timer" parent="." unique_id=1547658131]
+wait_time = 5.0
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Timer" unique_id=883166835]
-position = Vector2(578, 322)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=704650840]
+zoom = Vector2(1.015, 1.015)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=883166835]
 scale = Vector2(2.1554961, 1.6318305)
 texture = ExtResource("1_k64ye")
 
-[node name="Close" type="Button" parent="Timer" unique_id=1998557784]
-offset_left = 1042.0
-offset_top = 28.0
-offset_right = 1124.0
-offset_bottom = 74.0
+[node name="Close" type="Button" parent="Camera2D" unique_id=1998557784]
+offset_left = 464.0
+offset_top = -294.0
+offset_right = 546.0
+offset_bottom = -248.0
 text = "Close"
-metadata/_edit_use_anchors_ = true
 
-[node name="Dinero" type="Sprite2D" parent="Timer" unique_id=412352311]
-position = Vector2(120.99997, 78)
+[node name="Dinero" type="Sprite2D" parent="Camera2D" unique_id=412352311]
+position = Vector2(-447, -233)
 scale = Vector2(0.045141123, 0.042096466)
 texture = ExtResource("3_sruq1")
 
-[node name="Control" type="Control" parent="." unique_id=936481918]
-z_index = 1
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Nice work email" type="Sprite2D" parent="Control" unique_id=1743487408]
-z_index = 1
-position = Vector2(15.999992, -7.000016)
-scale = Vector2(0.22955722, 0.19468622)
-texture = ExtResource("4_yvia3")
-
-[node name="Cosa" type="Label" parent="Control" unique_id=23095870]
-layout_mode = 0
-offset_left = -152.0
-offset_top = -257.0
-offset_right = 160.0
-offset_bottom = -175.0
-theme_override_font_sizes/font_size = 59
-text = "dwasd"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Buy" type="Button" parent="Control" unique_id=2029750787]
-z_index = 1
-layout_mode = 0
-offset_left = -131.0
-offset_top = 176.0
-offset_right = 147.0
-offset_bottom = 284.0
-theme_override_font_sizes/font_size = 66
-text = "Buy"
-
-[node name="Prev" type="Button" parent="Control" unique_id=64447347]
-layout_mode = 0
-offset_left = 390.0
-offset_top = -99.0
-offset_right = 453.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 97
-text = ">"
-
-[node name="Next" type="Button" parent="Control" unique_id=1857255532]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -10.825
-anchor_top = -2.4
-anchor_right = -9.3
-anchor_bottom = 1.05
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_font_sizes/font_size = 101
-text = "<"
-metadata/_edit_use_anchors_ = true
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Timer/Close" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Timer/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Control/Prev" to="." method="_on_prev_pressed"]
-[connection signal="pressed" from="Control/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Camera2D/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Camera2D/Close" to="." method="_on_button_pressed"]
