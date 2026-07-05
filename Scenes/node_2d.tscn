@@ -1476,7 +1476,7 @@ animations = [{
 }]
 
 [node name="Main" type="Node2D" unique_id=1979521281]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.36, 1.36)
 script = ExtResource("1_2ooml")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1944310826]
@@ -1573,6 +1573,7 @@ position = Vector2(-134.1741, -3.7242813)
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="." unique_id=211465135]
 
 [node name="Tienda_sprite" type="Sprite2D" parent="." unique_id=1268554274]
+z_index = 100
 
 [node name="BaseMaquina" parent="Tienda_sprite" unique_id=1188009763 instance=ExtResource("4_85gyg")]
 
