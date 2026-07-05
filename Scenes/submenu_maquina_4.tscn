@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgeia0lx7p6bl"]
+
+[node name="Node2D" type="Control" unique_id=1244840042]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1314604699]
+layout_mode = 0
+offset_right = 406.0
+offset_bottom = 290.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1507101921]
+layout_mode = 2
+text = "Etiquetado"
+horizontal_alignment = 1
