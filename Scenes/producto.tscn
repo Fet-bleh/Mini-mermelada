@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://cr7hlf0d04qi7"]
 
-[node name="Producto" type="Node2D" unique_id=83636418]
+[ext_resource type="Script" uid="uid://cjscp5eheca32" path="res://producto.gd" id="1_d6hsj"]
+[ext_resource type="Texture2D" uid="uid://bjsoup86c12mc" path="res://Assets/protagonist-v2.png" id="2_2uhc7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7i21o"]
+size = Vector2(1, 21)
+
+[node name="Producto" type="Area2D" unique_id=1476850437]
+script = ExtResource("1_d6hsj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432922541]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_7i21o")
+
+[node name="ProductoSprite" type="Sprite2D" parent="." unique_id=1995049301]
+position = Vector2(23, 22)
+scale = Vector2(0.3691405, 0.4296871)
+texture = ExtResource("2_2uhc7")
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 128)
