@@ -1,12 +1,11 @@
-extends Sprite2D
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	self.global_position = self.global_position + Vector2(1,5)
+func _process(delta: float) -> void:
 	pass
