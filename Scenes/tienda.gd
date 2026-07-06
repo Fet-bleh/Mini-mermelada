@@ -3,6 +3,7 @@ extends Machine
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.add_to_group("tienda")
 	input_event.connect(_on_area_maquina_input_event)
 
 

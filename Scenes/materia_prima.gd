@@ -1,13 +1,13 @@
 extends Machine
 
-var medidor_sospecha = 0
 @export var texturas: Dictionary = {"bueno": "res://Assets/figuritas individuales/bola mate.png", "neutral": "res://Assets/figuritas individuales/bola trigo.png", "terrible": "res://Assets/figuritas individuales/bola mota.png"}
 @export var dinero: Dictionary = {"bueno": 10, "neutral": -10, "terrible": -30}
-@export var probabilidad: Dictionary = {"bueno": 0.8, "neutral": 0.125, "terrible": 0.075}
-@export var sospecha: Dictionary = {"bueno": -5, "neutral": 15, "terrible": 30}
+@export var probabilidad: Dictionary = {"bueno": 0.7, "neutral": 0.2, "terrible": 0.1}
+@export var sospecha: Dictionary = {"bueno": 5, "neutral": -15, "terrible": -30}
 @export var tipo: Dictionary = {"bueno": "mate", "neutral": "trigo", "terrible": "mota"}
 
 func _ready():
+	super._ready()
 	input_event.connect(_on_area_maquina_input_event)
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
@@ -21,8 +21,7 @@ func _on_area_entered(area: Area2D) -> void:
 		return
 	var resultado = elegir_caso()
 	$"../..".play(resultado)
-	medidor_sospecha = max(medidor_sospecha+sospecha[resultado], 0)
-	print(medidor_sospecha)
+	logOp(resultado, sospecha[resultado])
 	area.apply_texture(texturas[resultado], tipo[resultado], dinero[resultado])
 
 func _on_area_exited(area: Area2D) -> void:
@@ -44,5 +43,6 @@ func elegir_caso() -> String:
 
 func _on_area_maquina_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
+		machine_name = "Raw Ingredients"
 		interacted.emit(self)
 		print(self)

@@ -1,15 +1,97 @@
 [gd_scene format=3 uid="uid://cj8wbt4c2cr4"]
 
+[ext_resource type="Script" uid="uid://u5s34kk2wmso" path="res://Scenes/submenu_maquina.gd" id="1_h36p7"]
+
 [node name="SubmenuMaquina1" type="Control" unique_id=458442121]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_h36p7")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2073414716]
 layout_mode = 0
 offset_right = 406.0
 offset_bottom = 290.0
 
-[node name="Label" type="Label" parent="PanelContainer" unique_id=1833030013]
+[node name="Margen" type="MarginContainer" parent="PanelContainer" unique_id=946739416]
 layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="main" type="VBoxContainer" parent="PanelContainer/Margen" unique_id=236478592]
+layout_mode = 2
+
+[node name="MaquinaLabel" type="Label" parent="PanelContainer/Margen/main" unique_id=1833030013]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Materia Prima"
 horizontal_alignment = 1
+
+[node name="Separador" type="HBoxContainer" parent="PanelContainer/Margen/main" unique_id=760268522]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Margen/main" unique_id=235156027]
+layout_mode = 2
+
+[node name="ColumnaIz" type="VBoxContainer" parent="PanelContainer/Margen/main/HBoxContainer" unique_id=2103819222]
+layout_mode = 2
+
+[node name="Recent Operations" type="Label" parent="PanelContainer/Margen/main/HBoxContainer/ColumnaIz" unique_id=141764212]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Recent Operations"
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/Margen/main/HBoxContainer/ColumnaIz" unique_id=1104556062]
+custom_minimum_size = Vector2(0.65, 118.48)
+layout_mode = 2
+columns = 2
+
+[node name="reparador" type="Button" parent="PanelContainer/Margen/main/HBoxContainer/ColumnaIz" unique_id=707122414]
+custom_minimum_size = Vector2(0, 54.995)
+layout_mode = 2
+text = "Fix Machine"
+
+[node name="Separador" type="VBoxContainer" parent="PanelContainer/Margen/main/HBoxContainer" unique_id=787311521]
+custom_minimum_size = Vector2(79.435, 0)
+layout_mode = 2
+
+[node name="ColumnaDer" type="VBoxContainer" parent="PanelContainer/Margen/main/HBoxContainer" unique_id=611803684]
+layout_mode = 2
+accessibility_region = true
+
+[node name="Condicion" type="Label" parent="PanelContainer/Margen/main/HBoxContainer/ColumnaDer" unique_id=1665012593]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Condition"
+
+[node name="separador" type="VBoxContainer" parent="PanelContainer/Margen/main/HBoxContainer/ColumnaDer" unique_id=1043408773]
+custom_minimum_size = Vector2(0, 8.265)
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer/Margen/main/HBoxContainer/ColumnaDer" unique_id=2032457893]
+custom_minimum_size = Vector2(30, 150)
+custom_maximum_size = Vector2(50, -1)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(21.255, 0)
+value = 38.56
+fill_mode = 3
+show_percentage = false
+
+[node name="Close" type="Button" parent="." unique_id=1176715436]
+layout_mode = 0
+offset_left = 343.0
+offset_right = 406.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.94, 0.20680003, 0.20680003, 1)
+text = "Close"
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1196696323]
+visible = false
+layout_mode = 0
+offset_right = 406.0
+offset_bottom = 290.0
+mouse_filter = 2
+color = Color(0.57, 0, 0, 1)

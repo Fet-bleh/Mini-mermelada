@@ -1,5 +1,7 @@
-extends Node2D
+extends Area2D
 
-func _input_event(viewport, event, shape_idx):
-		if event.is_action_pressed("click"):
-			$"../../..".queue_free()
+
+
+func _on_input_event(viewport, event, shape_idx):
+	if event.is_action_pressed("click"):
+			$"../..".queue_free()

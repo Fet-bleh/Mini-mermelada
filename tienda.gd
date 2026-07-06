@@ -13,5 +13,6 @@ func _on_timer_timeout() -> void:
 	virus_inst.scale *= n
 	if n > 2: virus_inst.position = Vector2(randi_range(-128, 128), randi_range(48, -42))
 	else:
-		virus_inst.position = Vector2(randi_range(-371, 370), randi_range(121, -121))
+		virus_inst.position = Vector2(randi_range(0, 0), randi_range(121+371, -121-371))
 	add_child(virus_inst)
+	

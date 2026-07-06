@@ -8,29 +8,35 @@
 process_mode = 3
 script = ExtResource("1_ko86m")
 
-[node name="Timer" type="Timer" parent="." unique_id=1547658131]
-wait_time = 5.0
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1745143783]
+offset_right = 1150.0
+offset_bottom = 645.0
+
+[node name="Timer" type="Timer" parent="ColorRect" unique_id=1547658131]
+wait_time = 3.0
 autostart = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=704650840]
-zoom = Vector2(1.015, 1.015)
+[node name="Camera2D" type="Camera2D" parent="ColorRect" unique_id=704650840]
+position = Vector2(9.235, 0)
+offset = Vector2(566.84, 324)
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=883166835]
-scale = Vector2(2.1554961, 1.6318305)
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/Camera2D" unique_id=385754707]
+position = Vector2(565.765, 324)
+scale = Vector2(2.1698108, 1.6318305)
 texture = ExtResource("1_k64ye")
 
-[node name="Close" type="Button" parent="Camera2D" unique_id=1998557784]
-offset_left = 464.0
-offset_top = -294.0
-offset_right = 546.0
-offset_bottom = -248.0
+[node name="Close" type="Button" parent="ColorRect/Camera2D" unique_id=1998557784]
+offset_left = 1027.9714
+offset_top = 28.28653
+offset_right = 1109.9714
+offset_bottom = 74.28653
 text = "Close"
 
-[node name="Dinero" type="Sprite2D" parent="Camera2D" unique_id=412352311]
-position = Vector2(-447, -233)
+[node name="Dinero" type="Sprite2D" parent="ColorRect/Camera2D" unique_id=412352311]
+position = Vector2(116.971436, 89.28653)
 scale = Vector2(0.045141123, 0.042096466)
 texture = ExtResource("3_sruq1")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Camera2D/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Camera2D/Close" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="ColorRect/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="ColorRect/Camera2D/Close" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/Camera2D/Close" to="." method="_on_close_pressed"]

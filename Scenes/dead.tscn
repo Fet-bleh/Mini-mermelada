@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d3xtssykiiw7q"]
+
+[ext_resource type="Script" uid="uid://cwe6an3cndf28" path="res://button.gd" id="1_6bsmv"]
+
+[node name="Node2D" type="Control" unique_id=395084691]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1578514451]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 136.0
+offset_right = 950.0
+offset_bottom = 505.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1799464034]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=208284078]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=13090404]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.19, 0.19, 1)
+theme_override_font_sizes/font_size = 39
+text = "YOU WERE FIRED"
+horizontal_alignment = 1
+
+[node name="Money" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1844532805]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1775851849]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "TRY AGAIN"
+script = ExtResource("1_6bsmv")
+
+[connection signal="button_up" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="PanelContainer/MarginContainer/VBoxContainer/Button" method="_on_button_up"]
+[connection signal="gui_input" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="PanelContainer/MarginContainer/VBoxContainer/Button" method="_on_gui_input"]

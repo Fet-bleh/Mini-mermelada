@@ -3,7 +3,9 @@ extends Node2D
 var hand_cursor
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for machine in get_tree().get_nodes_in_group("machines"):
+		machine.mouse_entered.connect(area2d_mouse_enter)
+		machine.mouse_exited.connect(area2d_mouse_exit)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

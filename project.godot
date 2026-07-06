@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Gamestate="*uid://cixmcppn4ov26"
+GameManager="*uid://tt61c6jb8s3i"
+Main="*uid://dhs3qmfg6m3m5"
 
 [display]
 
@@ -27,6 +29,8 @@ window/stretch/aspect="expand"
 [global_group]
 
 machines=""
+manager=""
+main_scene=""
 
 [input]
 
